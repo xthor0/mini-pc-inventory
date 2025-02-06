@@ -25,6 +25,9 @@ if [ $? -ne 0 ]; then
   exit 255
 fi
 
+# get the latest
+git pull
+
 # create a commit and upload it
 git add inventory
 git commit -m 'adding system ${product} by ${manufactuer}'
