@@ -24,3 +24,5 @@ fi
 git add inventory
 git commit -m 'adding system ${product} by ${manufactuer}'
 git push
+
+popd

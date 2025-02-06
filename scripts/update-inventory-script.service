@@ -1,0 +1,10 @@
+[Unit]
+Description=Update mini-pc-inventory repo
+After=network-online.target
+
+[Service]
+WorkingDirectory=/srv/mini-pc-inventory
+ExecStart=git pull
+
+[Install]
+WantedBy=multi-user.target
