@@ -30,7 +30,7 @@ git pull
 
 # create a commit and upload it
 git add inventory
-git commit -m 'adding system ${product} by ${manufactuer}'
+git commit -m "adding system ${product} by ${manufactuer}"
 git push
 
 # tell me it's done
