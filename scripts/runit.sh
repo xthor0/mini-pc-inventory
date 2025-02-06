@@ -10,6 +10,7 @@ product="$(dmidecode -s system-product-name)"
 uuid="$(dmidecode -s system-uuid)"
 
 output_file="./inventory/${manufacturer}_${product}_${uuid}.md"
+echo "Will create: ${output_file}"
 
 # does this output file already exist?
 if [ -f "${output_file}" ]; then

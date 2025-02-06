@@ -4,7 +4,7 @@ After=update-inventory-script.target
 
 [Service]
 WorkingDirectory=/srv/mini-pc-inventory/scripts
-ExecStart=runit.sh
+ExecStart=/srv/mini-pc-inventory/scripts/runit.sh
 
 [Install]
 WantedBy=multi-user.target
