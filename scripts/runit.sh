@@ -19,7 +19,11 @@ if [ -f "${output_file}" ]; then
 fi
 
 # run the system-info.sh script and inventory it
-./scripts/system-info.sh > ${output_file}
+./scripts/system-info.sh > "${output_file}"
+if [ $? -ne 0 ]; then
+  echo "Error - exiting here."
+  exit 255
+fi
 
 # create a commit and upload it
 git add inventory
