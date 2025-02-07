@@ -1,10 +1,12 @@
 [Unit]
-Description=Update mini-pc-inventory repo
-After=update-inventory-script.target
+Description=Run PC inventory script
 
 [Service]
 WorkingDirectory=/srv/mini-pc-inventory/scripts
+ExecStartPre=/bin/sh -c 'until ping -c1 google.com; do sleep 1; done;'
+ExecStartPre=git pull
 ExecStart=/srv/mini-pc-inventory/scripts/runit.sh
+TimeoutSec=900
 
 [Install]
 WantedBy=multi-user.target

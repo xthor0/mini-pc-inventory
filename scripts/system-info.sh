@@ -34,7 +34,7 @@ diskcount=$(lsblk -ndo NAME,TRAN,SIZE,TYPE | grep -v usb | grep -v mmcblk.boot[0
 if [ ${diskcount} -eq 0 ]; then
   echo "No disks found with `lsblk`"
 else
-  lsblk -ndo NAME,TRAN,SIZE,TYPE | grep -v usb | grep -v mmcblk?boot[0-9] | while read diskline; do
+  lsblk -ndo NAME,TRAN,SIZE,TYPE | grep -v usb | grep -v mmcblk.boot[0-9] | while read diskline; do
     disk=$(echo "${diskline}" | awk '{ print $1 }')
     size=$(echo "${diskline}" | awk '{ print $3 }')
     echo "### ${disk}"
