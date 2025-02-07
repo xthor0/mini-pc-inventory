@@ -1,7 +1,10 @@
 #!/bin/bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+# notify me things are starting
+/usr/local/bin/pushover_me.sh inventory started on IP address $(ip a | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
 
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 pushd ${SCRIPT_DIR}/../
 
 # generate a name for the markdown file
