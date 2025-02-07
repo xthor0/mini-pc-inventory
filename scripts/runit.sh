@@ -33,10 +33,13 @@ git pull
 
 # create a commit and upload it
 git add inventory
-git commit -m "adding system ${product} by ${manufactuer}"
+git commit -m "adding system ${product} by ${manufacturer}"
 git push
 
 # tell me it's done
 /usr/local/bin/pushover_me.sh inventory script has finished
 
 popd
+
+# shut down in 1 minute
+shutdown 1

@@ -38,7 +38,9 @@ else
     disk=$(echo "${diskline}" | awk '{ print $1 }')
     size=$(echo "${diskline}" | awk '{ print $3 }')
     echo "### ${disk}"
+    echo
     echo "Size: ${size}"
+    echo
     if [[ ${disk} =~ mmcblk ]]; then
       # skip smartctl on mmc devices, 'cause it don't work
       echo "Type: eMMC"
