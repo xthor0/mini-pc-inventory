@@ -1,5 +1,7 @@
 #!/bin/bash
 
+geekbench="/root/inventory/Geekbench-6.3.0-Linux/geekbench6"
+
 # outputs in markdown
 # redirect to file
 
@@ -11,13 +13,13 @@ echo
 echo "## System Information "
 echo
 echo '```'
-/srv/Geekbench-6.3.0-Linux/geekbench6 --sysinfo
+fastfetch
 echo '```'
 echo
 
 # geekbench
 gbout=$(mktemp)
-/srv/Geekbench-6.3.0-Linux/geekbench6 --no-upload > ${gbout}
+${geekbench} --no-upload > ${gbout}
 
 echo "## Geekbench "
 echo '```'
@@ -53,5 +55,19 @@ else
     echo '```'
   done
 fi
+
+# lspci
+echo "## lspci"
+echo
+echo '```'
+lspci
+echo '```'
+
+# dmidecode to parse DIMM information, let's see if this is helpful
+echo "## Memory Specific Information"
+echo
+echo '```'
+dmidecode | grep -A21 ^Memory\ Device$
+echo '```'
 
 # end
