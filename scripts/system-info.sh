@@ -1,6 +1,19 @@
 #!/bin/bash
 
-geekbench="/root/inventory/Geekbench-6.3.0-Linux/geekbench6"
+# system rescue CD needs a little time to set up
+# let's wait for one minute
+# hoping this prevents pacman from downloading the entire package database every time
+sleep 60
+
+# we need fastfetch installed to work right
+pacman -Sy --noconfirm fastfetch --needed
+
+# we also need to ensure Git is configured correctly
+git config --global user.name "Inventory Automater"
+git config --global user.email "xthor@xthorsworld.com"
+
+# location of Geekbench binary
+geekbench="/root/inventory/Geekbench-6.4.0-Linux/geekbench6"
 
 # outputs in markdown
 # redirect to file
@@ -18,16 +31,10 @@ echo '```'
 echo
 
 # geekbench
-gbout=$(mktemp)
-${geekbench} --no-upload > ${gbout}
-
 echo "## Geekbench "
 echo '```'
-tail -n +24 ${gbout}
+${geekbench} --no-upload
 echo '```'
-
-# clean up output
-rm -f ${gbout}
 
 # get disk info for each found disk
 echo "## Disk Information "
