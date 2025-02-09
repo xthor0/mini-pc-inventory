@@ -28,8 +28,8 @@ if [ $? -ne 0 ]; then
 fi
 
 # we also need to ensure Git is configured correctly
-git config --global user.name "Inventory Automater"
-git config --global user.email "xthor@xthorsworld.com"
+HOME=/root git config --global user.name "Inventory Automater"
+HOME=/root git config --global user.email "xthor@xthorsworld.com"
 
 # ensure we're running the latest
 
