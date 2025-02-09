@@ -47,8 +47,8 @@ git pull
 
 # create a commit and upload it
 git add inventory
-git commit -m "adding system ${product} by ${manufacturer}"
-git push
+HOME=/root git commit -m "adding system ${product} by ${manufacturer}"
+HOME=/root git push
 
 # tell me it's done
 /usr/local/bin/pushover_me.sh inventory script has finished ${ip}
