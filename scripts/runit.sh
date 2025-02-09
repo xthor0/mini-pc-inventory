@@ -1,7 +1,9 @@
 #!/bin/bash
 
+ip=$(ip a | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
+
 # notify me things are starting
-/usr/local/bin/pushover_me.sh inventory started on IP address $(ip a | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p')
+/usr/local/bin/pushover_me.sh inventory started on ${ip}
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 pushd ${SCRIPT_DIR}/../
@@ -49,7 +51,7 @@ git commit -m "adding system ${product} by ${manufacturer}"
 git push
 
 # tell me it's done
-/usr/local/bin/pushover_me.sh inventory script has finished
+/usr/local/bin/pushover_me.sh inventory script has finished ${ip}
 
 popd
 
