@@ -49,11 +49,10 @@ git pull
 git add inventory
 HOME=/root git commit -m "adding system ${product} by ${manufacturer}"
 HOME=/root git push
-
-# tell me it's done
-/usr/local/bin/pushover_me.sh inventory script has finished ${ip}
-
-popd
-
-# shut down in 1 minute
-shutdown 1
+if [ $? -eq 0 ]; then
+  # tell me it's done
+  /usr/local/bin/pushover_me.sh inventory script has finished ${ip}
+  shutdown 1
+else
+  /usr/local/bin/pushover_me.sh inventory script could not run 'git push' ${ip}
+fi
