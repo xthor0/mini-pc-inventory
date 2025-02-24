@@ -3,11 +3,19 @@
 ## System Information 
 
 ```
-Geekbench 6.3.0 Pro : https://www.geekbench.com/
+Host: NUC8i5BEK (J72742-303)
+CPU: Intel(R) Core(TM) i5-8259U (8) @ 3.80 GHz
+GPU: Intel Iris Plus Graphics 655 @ 1.05 GHz [Integrated]
+Memory: 7.62 GiB
+```
+
+## Geekbench 
+```
+Geekbench 6.4.0 Pro : https://www.geekbench.com/
 
 System Information
-  Operating System              Debian GNU/Linux 12 (bookworm)
-  Kernel                        Linux 6.1.0-30-amd64 x86_64
+  Operating System              SystemRescue 11.03
+  Kernel                        Linux 6.6.63-1-lts x86_64
   Model                         Intel(R) Client Systems NUC8i5BEK
   Motherboard                   Intel Corporation NUC8BEB
   BIOS                          Intel Corp. BECFL357.86A.0092.2023.0214.1114
@@ -21,67 +29,82 @@ CPU Information
   L1 Data Cache                 32.0 KB x 4
   L2 Cache                      256 KB x 4
   L3 Cache                      6.00 MB
+  Instruction Sets              sse2 sse3 pclmul fma3 sse41 aesni avx avx2
 
 Memory Information
   Size                          7.62 GB
 
-```
 
-## Geekbench 
-```
 Single-Core
-  File Compression               1298             186.4 MB/sec
-  Navigation                     1691          10.2 routes/sec
-  HTML5 Browser                  1378           28.2 pages/sec
-  PDF Renderer                   1436         33.1 Mpixels/sec
-  Photo Library                  1072          14.6 images/sec
-  Clang                          1619          7.97 Klines/sec
-  Text Processing                1402          112.3 pages/sec
-  Asset Compression              1285              39.8 MB/sec
-  Object Detection                625          18.7 images/sec
-  Background Blur                1949          8.07 images/sec
-  Horizon Detection              1756         54.6 Mpixels/sec
-  Object Remover                 1136         87.3 Mpixels/sec
-  HDR                            1425         41.8 Mpixels/sec
-  Photo Filter                   1493          14.8 images/sec
-  Ray Tracer                     1301         1.26 Mpixels/sec
-  Structure from Motion          1689         53.5 Kpixels/sec
+  File Compression               1299             186.5 MB/sec
+  Navigation                     1774          10.7 routes/sec
+  HTML5 Browser                  1394           28.5 pages/sec
+  PDF Renderer                   1426         32.9 Mpixels/sec
+  Photo Library                  1079          14.6 images/sec
+  Clang                          1605          7.91 Klines/sec
+  Text Processing                1392          111.5 pages/sec
+  Asset Compression              1292              40.0 MB/sec
+  Object Detection                632          18.9 images/sec
+  Background Blur                1944          8.05 images/sec
+  Horizon Detection              1778         55.3 Mpixels/sec
+  Object Remover                 1185         91.1 Mpixels/sec
+  HDR                            1422         41.7 Mpixels/sec
+  Photo Filter                   1721          17.1 images/sec
+  Ray Tracer                     1292         1.25 Mpixels/sec
+  Structure from Motion          1679         53.2 Kpixels/sec
 
 Multi-Core
-  File Compression               3476             499.2 MB/sec
-  Navigation                     7343          44.2 routes/sec
-  HTML5 Browser                  4977          101.9 pages/sec
-  PDF Renderer                   6280        144.8 Mpixels/sec
-  Photo Library                  4396          59.7 images/sec
-  Clang                          6967          34.3 Klines/sec
-  Text Processing                1757          140.7 pages/sec
-  Asset Compression              6313             195.6 MB/sec
-  Object Detection               2154          64.4 images/sec
-  Background Blur                5401          22.4 images/sec
-  Horizon Detection              6480        201.6 Mpixels/sec
-  Object Remover                 5019        385.9 Mpixels/sec
-  HDR                            4710        138.2 Mpixels/sec
-  Photo Filter                   3627          36.0 images/sec
-  Ray Tracer                     6808         6.59 Mpixels/sec
-  Structure from Motion          5222        165.3 Kpixels/sec
+  File Compression               3482             500.1 MB/sec
+  Navigation                     7398          44.6 routes/sec
+  HTML5 Browser                  4815           98.6 pages/sec
+  PDF Renderer                   6162        142.1 Mpixels/sec
+  Photo Library                  4424          60.0 images/sec
+  Clang                          6831          33.6 Klines/sec
+  Text Processing                1755          140.5 pages/sec
+  Asset Compression              6350             196.8 MB/sec
+  Object Detection               2178          65.2 images/sec
+  Background Blur                6089          25.2 images/sec
+  Horizon Detection              6523        203.0 Mpixels/sec
+  Object Remover                 4983        383.1 Mpixels/sec
+  HDR                            4720        138.5 Mpixels/sec
+  Photo Filter                   3695          36.7 images/sec
+  Ray Tracer                     6912         6.69 Mpixels/sec
+  Structure from Motion          5173        163.8 Kpixels/sec
 
 Benchmark Summary
-  Single-Core Score             1349
-    Integer Score                 1268
-    Floating Point Score          1513
-  Multi-Core Score              4654
-    Integer Score                 4372
-    Floating Point Score          5228
+  Single-Core Score             1368
+    Integer Score                 1277
+    Floating Point Score          1553
+  Multi-Core Score              4675
+    Integer Score                 4353
+    Floating Point Score          5338
 
 ```
 ## Disk Information 
 
-### nvme0n1
-Size: 476.9G
+### loop0
+
+Size: loop
+
 smartctl output: 
 ```
-smartctl 7.3 2022-02-28 r5338 [x86_64-linux-6.1.0-30-amd64] (local build)
-Copyright (C) 2002-22, Bruce Allen, Christian Franke, www.smartmontools.org
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.63-1-lts] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
+
+/dev/loop0: Unable to detect device type
+Please specify device type with the -d option.
+
+Use smartctl -h to get a usage summary
+
+```
+### nvme0n1
+
+Size: 476.9G
+
+smartctl output: 
+```
+smartctl 7.4 2023-08-01 r5530 [x86_64-linux-6.6.63-1-lts] (local build)
+Copyright (C) 2002-23, Bruce Allen, Christian Franke, www.smartmontools.org
 
 === START OF INFORMATION SECTION ===
 Model Number:                       SPCC M.2 PCIe SSD
@@ -97,7 +120,7 @@ Number of Namespaces:               1
 Namespace 1 Size/Capacity:          512,110,190,592 [512 GB]
 Namespace 1 Formatted LBA Size:     512
 Namespace 1 IEEE EUI-64:            6479a7 28f2093434
-Local Time is:                      Thu Feb  6 18:23:40 2025 MST
+Local Time is:                      Sat Feb  8 17:52:20 2025 MST
 Firmware Updates (0x12):            1 Slot, no Reset required
 Optional Admin Commands (0x0017):   Security Format Frmw_DL Self_Test
 Optional NVM Commands (0x005d):     Comp DS_Mngmt Wr_Zero Sav/Sel_Feat Timestmp
@@ -124,25 +147,100 @@ SMART overall-health self-assessment test result: PASSED
 
 SMART/Health Information (NVMe Log 0x02)
 Critical Warning:                   0x00
-Temperature:                        26 Celsius
+Temperature:                        25 Celsius
 Available Spare:                    100%
 Available Spare Threshold:          5%
 Percentage Used:                    16%
-Data Units Read:                    7,877,976 [4.03 TB]
+Data Units Read:                    7,878,010 [4.03 TB]
 Data Units Written:                 24,730,367 [12.6 TB]
-Host Read Commands:                 66,997,078
+Host Read Commands:                 66,997,827
 Host Write Commands:                638,657,353
 Controller Busy Time:               4,255
-Power Cycles:                       224
+Power Cycles:                       227
 Power On Hours:                     17,196
-Unsafe Shutdowns:                   110
+Unsafe Shutdowns:                   111
 Media and Data Integrity Errors:    0
-Error Information Log Entries:      304
+Error Information Log Entries:      307
 Warning  Comp. Temperature Time:    0
 Critical Comp. Temperature Time:    0
 
 Error Information (NVMe Log 0x01, 16 of 63 entries)
-Num   ErrCount  SQId   CmdId  Status  PELoc          LBA  NSID    VS
-  0        304     0  0x0018  0x4004  0x028            0     0     -
+Num   ErrCount  SQId   CmdId  Status  PELoc          LBA  NSID    VS  Message
+  0        307     0  0x4003  0x4004  0x028            0     0     -  Invalid Field in Command
 
+Read Self-test Log failed: Invalid Field in Command (0x2002)
+
+```
+## lspci
+
+```
+00:00.0 Host bridge: Intel Corporation 8th Gen Core Processor Host Bridge/DRAM Registers (rev 08)
+00:02.0 VGA compatible controller: Intel Corporation CoffeeLake-U GT3e [Iris Plus Graphics 655] (rev 01)
+00:08.0 System peripheral: Intel Corporation Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model
+00:12.0 Signal processing controller: Intel Corporation Cannon Point-LP Thermal Controller (rev 30)
+00:14.0 USB controller: Intel Corporation Cannon Point-LP USB 3.1 xHCI Controller (rev 30)
+00:14.2 RAM memory: Intel Corporation Cannon Point-LP Shared SRAM (rev 30)
+00:14.3 Network controller: Intel Corporation Cannon Point-LP CNVi [Wireless-AC] (rev 30)
+00:16.0 Communication controller: Intel Corporation Cannon Point-LP MEI Controller #1 (rev 30)
+00:17.0 SATA controller: Intel Corporation Cannon Point-LP SATA Controller [AHCI Mode] (rev 30)
+00:1c.0 PCI bridge: Intel Corporation Cannon Point-LP PCI Express Root Port #1 (rev f0)
+00:1c.4 PCI bridge: Intel Corporation Cannon Point-LP PCI Express Root Port #5 (rev f0)
+00:1d.0 PCI bridge: Intel Corporation Cannon Point-LP PCI Express Root Port #9 (rev f0)
+00:1d.6 PCI bridge: Intel Corporation Cannon Point-LP PCI Express Root Port #15 (rev f0)
+00:1f.0 ISA bridge: Intel Corporation Cannon Point-LP LPC Controller (rev 30)
+00:1f.3 Audio device: Intel Corporation Cannon Point-LP High Definition Audio Controller (rev 30)
+00:1f.4 SMBus: Intel Corporation Cannon Point-LP SMBus Controller (rev 30)
+00:1f.5 Serial bus controller: Intel Corporation Cannon Point-LP SPI Controller (rev 30)
+00:1f.6 Ethernet controller: Intel Corporation Ethernet Connection (6) I219-V (rev 30)
+6d:00.0 Non-Volatile memory controller: Phison Electronics Corporation E12 NVMe Controller (rev 01)
+6e:00.0 Unassigned class [ff00]: Realtek Semiconductor Co., Ltd. RTS522A PCI Express Card Reader (rev 01)
+```
+## Memory Specific Information
+
+```
+Memory Device
+	Array Handle: 0x003B
+	Error Information Handle: Not Provided
+	Total Width: 64 bits
+	Data Width: 64 bits
+	Size: 8 GB
+	Form Factor: SODIMM
+	Set: None
+	Locator: SODIMM1
+	Bank Locator: Memory Channel A
+	Type: DDR4
+	Type Detail: Synchronous
+	Speed: 3200 MT/s
+	Manufacturer: Samsung
+	Serial Number: 501C3279
+	Asset Tag: 9876543210
+	Part Number: M471A1K43DB1-CWE    
+	Rank: 1
+	Configured Memory Speed: 2400 MT/s
+	Minimum Voltage: 1.2 V
+	Maximum Voltage: 1.2 V
+	Configured Voltage: 1.2 V
+--
+Memory Device
+	Array Handle: 0x003B
+	Error Information Handle: Not Provided
+	Total Width: Unknown
+	Data Width: Unknown
+	Size: No Module Installed
+	Form Factor: Unknown
+	Set: None
+	Locator: SODIMM2
+	Bank Locator: Memory Channel B
+	Type: Unknown
+	Type Detail: None
+
+Handle 0x003E, DMI type 19, 31 bytes
+Memory Array Mapped Address
+	Starting Address: 0x00000000000
+	Ending Address: 0x001FFFFFFFF
+	Range Size: 8 GB
+	Physical Array Handle: 0x003B
+	Partition Width: 1
+
+Handle 0x003F, DMI type 43, 31 bytes
 ```
